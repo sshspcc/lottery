@@ -1,0 +1,69 @@
+body{
+    background-color: white;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+
+}
+
+.button{
+    margin-top: 10vh;;
+    height: 20vh;
+    width: 40vw;
+    font-size: 5rem;
+    background-color: tomato;
+}
+
+#present{
+    font-size: 7rem;
+    /* position: absolute; */
+    /* left: 50vw; */
+    /* text-align: center; */
+    /* margin-top: 10vh; */
+
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+  
+}
+
+img{
+    width: 400px;
+}
+
+.ball-div{
+    text-align: center;
+}
+
+.ball {
+    position: relative;
+    top: -110vh;
+    transition: all 600ms 0s ease;
+}
+  
+.fall {
+    transform: translateY(110vh);
+}
+
+.down {
+    transform: translateY(200vh);
+}
+
+.up{
+    transform: translateY(-100vh);
+}
+
+.display-none{
+    
+    display: none !important;
+}
+
+.balls{
+    transition: all 600ms 0s ease;
+    /* background-color: black; */
+}
+
+.rotate{
+    transform: rotate(180deg);
+
+}

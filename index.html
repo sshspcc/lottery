@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>抽選ページ</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:800&display=swap&subset=japanese"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="text-center m-3">抽選</h1>
+
+    <!-- <div class="button text-center">スタート</div> -->
+    <button class="button btn btn-lg d-block mx-auto" id="start" onclick="showPresent();">スタート</button>
+    <div id="present"></div>
+    <div class="balls">
+        <div class="ball-div">
+            <img src="img/half-ball-up.png" alt="" class="ball" id="up">
+        </div>
+        <div class="ball-div">
+            <img src="img/half-ball-down.png" alt="" class="ball" id="down">
+        </div>
+
+    </div>
+    <button class="okey btn btn-primary btn-lg d-block mx-auto display-none" onclick="hideBall();">OK</button>
+    <!-- <footer class="fixed-bottom display-none"> -->
+    <!-- </footer> -->
+    <footer class="fixed-bottom reset">
+        <button class="btn btn-dark d-flex pull-right" onclick="reset()">Reset</button>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

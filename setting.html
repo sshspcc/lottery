@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>抽選設定用ページ</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:800&display=swap&subset=japanese"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="m-3">抽選設定用ページ</h1>
+    <div class="form-inline">
+        <label for="present-num">プレゼントの種類数：</label>
+        <input type="number" name="present-num" class="form-control" id="num_box" min="0" value="0">
+        <button class="btn btn-primary" onclick="createForm();">決定</button>
+    </div>
+    <table class="mt-5">
+        <thead>
+            <tr>
+                <th>プレゼント名</th>
+                <th>個数</th>
+            </tr>
+        </thead>
+        <tbody id="presents">
+        </tbody>
+    </table>
+    <button class="btn btn-danger ml-5 mt-3" onclick="getPresent();">決定</button>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="setting.js"></script>
+</body>
+
+</html>
