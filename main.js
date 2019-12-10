@@ -15,10 +15,12 @@ let showPresent = function () {
         alert('抽選は終了しました．')
         return;
     }
-    let random = Math.floor(Math.random() * presents.length);
+    // let random = Math.floor(Math.random() * presents.length);
+    let random = lot();
 
     while (presents[random].number == 0) {
-        random = Math.floor(Math.random() * presents.length);
+        // random = Math.floor(Math.random() * presents.length);
+        random = lot();
     }
     showBall();
     setTimeout(() => {
@@ -26,8 +28,10 @@ let showPresent = function () {
     }, 500);
     setTimeout(() => {
         openBall();
+
         document.getElementById('present').innerHTML = presents[random].name;
         presents[random].number--;
+
         if (presents[random].number == 0) {
             // if (presents.length == 1) {
             //     presents = [];
@@ -50,7 +54,7 @@ let openBall = function () {
     $('#down').addClass('down');
 }
 
-let rotateBall = function(){
+let rotateBall = function () {
     $('.balls').addClass('rotate');
 }
 
@@ -68,13 +72,26 @@ let hideBall = function () {
     $('.okey').addClass('display-none')
 }
 
-let reset = function(){
+let reset = function () {
     conf = confirm('本当にリセットしますか？')
-    if(conf){
+    if (conf) {
         presents = JSON.parse(localStorage.getItem('default'));
         localStorage.setItem('present', JSON.stringify(presents));
         alert('リセットされました．')
-    }else{
+    } else {
         return;
+    }
+}
+
+let lot = function () {
+    let total = presents.reduce((t, p) => t += Number(p.number), 0);
+    const random = Number(Math.random().toFixed(2));
+    let searchPosition = 0;
+    for (let i = 0; i < presents.length; i++) {
+        const present = presents[i];
+        searchPosition += Number((present.number/total).toFixed(2));
+        if (random < searchPosition) {
+            return i;
+        }
     }
 }
